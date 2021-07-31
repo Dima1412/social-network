@@ -1,0 +1,31 @@
+.discriptionBlock {
+    padding: 10px;
+    display: flex;
+}
+
+.discriptionBlock img {
+height: 300px;
+}
+
+.imgBlock {
+    width: 50%;
+}
+
+img {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+h1 {
+    color: rgb(109, 4, 4);
+}
+
+h5 {
+    color: rgb(150, 243, 212);
+    text-decoration: underline;
+}
+
+.status {
+    color: rgb(109, 4, 4);
+font-family: cursive;
+}

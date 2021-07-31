@@ -1,0 +1,28 @@
+.page {
+    display: inline-block;
+    width: 27px;
+    color: rgb(2, 73, 73);
+    text-align: center;
+}
+
+
+.selectedPage {
+    font-weight: bold;
+}
+
+.pagesForm {
+    display: inline-block;
+    width: 540px;
+}
+
+.paginatorMain {
+position: relative;
+left: 190px;
+padding-bottom: 10px;
+}
+
+
+.paginatorMain button {
+    border: none;
+    background-color: rgba(1, 37, 46, 0.048);
+}
