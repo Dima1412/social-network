@@ -2,7 +2,7 @@ import React from "react";
 import "./App.css";
 import HeaderContainer from "./components/header/headerContainer";
 import Navbar from "./components/navbar/navbar";
-import { Route } from "react-router-dom";
+import { HashRouter, Redirect, Route } from "react-router-dom";
 import Music from "./components/Music/Music";
 import Newsfeed from "./components/Newsfeed/Newsfeed";
 import Settings from "./components/Settings/Settings";
@@ -36,6 +36,9 @@ class App extends React.Component {
         <HeaderContainer />
         <Navbar />
         <div className="app-wrapper-content">
+          <Route exact path='/'
+                 render={() => <Redirect to={'/profile'} />} /> 
+          
           <Route
             path="/dialogs"
             render={() => {
@@ -76,11 +79,11 @@ let ContainerApp = connect(mapStateToProps, { initializeApp })(App);
 
 const HeyHoApp = (props) => {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Provider store={store}>
         <ContainerApp />
       </Provider>
-    </BrowserRouter>
+    </HashRouter>
   );
 };
 

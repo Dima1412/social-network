@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import styles from './Paginator.module.css';
-
+import cn from 'classnames';
 
 
 let Paginator = (props) => {
@@ -29,9 +29,10 @@ let Paginator = (props) => {
             </span>
             <div className={styles.pagesForm}>
                 {pages.slice(portions * 20, (portions + 1) * 20).map(p => {
-                    return <div className={styles.page + " " +
-                        (props.currentPage === p ? styles.selectedPage : '')}
-                        onClick={() => { props.onPageChanged(p) }}>{p}</div>
+                    return <div key={p} 
+                                className={cn(styles.page, {[styles.selectedPage] : props.currentPage === p})}
+                                onClick={() => { props.onPageChanged(p) }}>{p}
+                            </div>
                 })}
             </div>
             <span>

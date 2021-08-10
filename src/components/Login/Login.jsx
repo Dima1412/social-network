@@ -9,7 +9,7 @@ import style from '../common/FormsControls/FormsControls.module.css';
 
 
 
-const LoginForm = ({handleSubmit, error}) => {
+const LoginForm = ({handleSubmit, error, captchaUrl}) => {
     return (
         <form onSubmit={handleSubmit}>
             <div>
@@ -30,6 +30,12 @@ const LoginForm = ({handleSubmit, error}) => {
                        name={'rememberMe'} 
                        component={Input} /> remember me
             </div>
+            {captchaUrl && <img src={captchaUrl} />}
+            {captchaUrl && <Field placeholder='image-symbols'
+                                  name='captcha'
+                                  validate={[required]}
+                                  component={Input} />}
+
             { error &&
                 <div className={style.formSummaryError}>
                     {error}
@@ -46,7 +52,7 @@ const LoginRedaxForm = reduxForm({ form: 'login' })(LoginForm)
 const Login = (props) => {
 
     const onSubmit = (formData) => {
-        props.login(formData.email, formData.password, formData.rememberMe)
+        props.login(formData.email, formData.password, formData.rememberMe, formData.captcha)
     }
 
     if (props.isAuth) {
@@ -56,13 +62,14 @@ const Login = (props) => {
     return (
         <div>
             <h1>Login</h1>
-            <LoginRedaxForm onSubmit={onSubmit} />
+            <LoginRedaxForm onSubmit={onSubmit} captchaUrl={props.captchaUrl}/>
         </div>
     )
 }
 
 const mapStateToProps = (state) => ({
-    isAuth: state.auth.isAuth
+    isAuth: state.auth.isAuth,
+    captchaUrl : state.auth.captchaUrl
 })
 
 

@@ -15,7 +15,7 @@ let Users = (props) => {
                        pageSize={props.pageSize}
                        onPageChanged={props.onPageChanged} />
             {
-            props.users.map(u => <User user={u}
+            [...props.users].reverse().map(u => <User user={u}
                                        followingInProgress={props.followingInProgress}
                                        follow={props.follow}
                                        unfollow={props.unfollow}

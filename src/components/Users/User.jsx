@@ -11,7 +11,7 @@ let User = ({user, ...props}) => {
     return (
         <div key={props.key}
              className={styles.userCard}>
-            <span>
+            <div>
                 <NavLink to={'/profile/' + user.id}>
                     <div>
                         <img src={user.photos.small != null ? user.photos.small : userPhoto} 
@@ -27,17 +27,12 @@ let User = ({user, ...props}) => {
                             props.follow(user.id)
                         }}>Follow</button>}
                 </div>
-            </span>
-            <span>
-                <span>
-                    <div>{user.name}</div>
-                    <div>{user.status}</div>
-                </span>
-                <span>
-                    <div>{'user.location.country'}</div>
-                    <div>{'user.location.city'}</div>
-                </span>
-            </span>
+            </div>
+            <div>
+                <div>{user.name}</div>
+                <div><b>{user.status}</b></div>
+            </div>
+            <div>── • ✤ • ──</div>
         </div>
     )
 };

@@ -10,7 +10,9 @@ const maxLength10 = maxLengthCreator(10);
 
 const MyPosts = (props) => {
 
-  let postsElements = [...props.posts].reverse().map(p => <Post message={p.message} likesCount={p.likesCount} />);
+  let postsElements = [...props.posts].reverse().map(p => <Post message={p.message} 
+                                                                likesCount={p.likesCount}
+                                                                key={p.id} />);
 
   let addNewPost = (values) => {
     props.addPost(values.newPostElement);
@@ -29,7 +31,7 @@ const MyPosts = (props) => {
 
 const MyPostsForm = (props) => {
   return (
-    <form onSubmit={props.handleSubmit}>
+    <form onSubmit={props.handleSubmit} className={s.postsForm}>
       <div>
         <Field component={Textarea} name='newPostElement' 
                placeholder='Enter your message' 

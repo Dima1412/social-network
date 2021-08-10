@@ -12,6 +12,7 @@ import { getUsers, getCurrentPage, getTotalUsersCount, getFollowingInProgress, g
 
 class UsersContainer extends React.Component {
     
+       
     componentDidMount () {
         this.props.requestUsers(this.props.currentPage, this.props.pageSize)
     }

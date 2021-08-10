@@ -8,6 +8,22 @@
     width: 60px;
   }
 
+  .header button {
+    border-color: rgb(70, 3, 3);
+    border-radius: 5px;
+    background-color: rgba(1, 37, 46, 0.158);
+    color:rgb(70, 3, 3);
+  }
+
   .loginBlock {
     float: right;
+    padding-top: 15px;
+    padding-right: 15px;
+    color: rgb(85, 3, 3);
+    font-weight: 500;
   }
+
+  .loginBlock a {
+    color: rgb(85, 3, 3);
+}
+

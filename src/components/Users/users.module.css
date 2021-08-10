@@ -7,5 +7,18 @@
 }
 
 .userCard {
+    color:rgb(83, 4, 4);
     margin-bottom: 10px;
+    font-weight: 500;
+}
+
+/* .userCard b {
+    color: black;
+} */
+
+.userCard button {
+    border-color: rgb(70, 3, 3);
+    border-radius: 5px;
+    background-color: rgba(1, 37, 46, 0.158);
+    color:rgb(70, 3, 3);
 }

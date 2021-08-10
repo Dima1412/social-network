@@ -11,6 +11,15 @@ height: 300px;
     width: 50%;
 }
 
+.imgBlock p {
+font-family: cursive;
+text-decoration: underline;
+position:relative;
+    bottom: 69px;
+    left: 88px;
+
+}
+
 img {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
@@ -20,12 +29,40 @@ h1 {
     color: rgb(109, 4, 4);
 }
 
-h5 {
-    color: rgb(150, 243, 212);
-    text-decoration: underline;
+b {
+    color: rgb(55, 194, 147);
 }
 
 .status {
     color: rgb(109, 4, 4);
 font-family: cursive;
 }
+
+.inputFile {
+    z-index: 1;
+    position:relative;
+    bottom: 28px;
+    left: 40px;
+    opacity: 0;
+}
+
+.contactsItem {
+    padding-left: 20px;
+}
+
+.dataBlock {
+    margin-top: 100px;
+}
+
+.dataBlock button {
+    border-color: rgb(70, 3, 3);
+    border-radius: 5px;
+    background-color: rgba(1, 37, 46, 0.158);
+    color:rgb(70, 3, 3);
+}
+
+.dataBlockEditFalse {
+    color:rgb(99, 5, 5);
+    font-weight: 500;
+}
+
